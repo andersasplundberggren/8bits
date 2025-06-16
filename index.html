@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!doctype html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="sv"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta charset="utf-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;title&gt;8-bitars bibliotek&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>body{background:#111;color:#fff;font-family:sans-serif;text-align:center}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span>#frame{border:none;width:640px;height:512px;margin-top:1rem;max-width:100%}</span></p>
+<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;h1&gt;Välj spel&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1">&lt;select id="pick"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;option disabled selected value&gt;-- välj spel --&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;option value="roms/smb.nes"&gt;Super Mario Bros&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;option value="roms/Solomon1.nes"&gt;Solomons key 1&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;option value="roms/zelda.nes"&gt;The Legend of Zelda&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;option value="roms/smb2.nes"&gt;Super Mario Bros 2&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;option value="roms/smb3.nes"&gt;Super Mario Bros 3&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;option value="roms/zelda2.nes"&gt;The Legend of Zelda 2&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/select&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button id="play"&gt;Starta&lt;/button&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;iframe id="frame" allowfullscreen&gt;&lt;/iframe&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const btn <span class="Apple-converted-space">  </span>= document.getElementById('play');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const pick<span class="Apple-converted-space">  </span>= document.getElementById('pick');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const frame = document.getElementById('frame');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>btn.addEventListener('click', () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if (!pick.value) return; <span class="Apple-converted-space">                  </span>// inget spel valt än</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>frame.src = 'player.html?rom=' + encodeURIComponent(pick.value);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
